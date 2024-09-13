@@ -1,0 +1,107 @@
+.kanban-board {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 20px;
+  padding: 20px;
+  background: #f7f7fb;
+  overflow-x: auto;
+}
+
+.kanban-column {
+  flex: 1;
+  min-width: 280px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.column-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.column-title {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  font-weight: bold;
+}
+
+.title-with-icon {
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+.task-count {
+  margin-right: 8px;
+}
+
+.plus-icon {
+  margin-right: 8px;
+}
+
+.task-count {
+  font-size: 16px;
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+}
+
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.display-button {
+  padding: 10px 15px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.controls-dropdown {
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f9f9f9;
+  margin-bottom: 20px;
+}
+
+.display-dropdown,
+.sort-dropdown {
+  margin-bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+  .kanban-board {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .kanban-board {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kanban-column {
+    min-width: 100%;
+  }
+
+  .column-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .column-title {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
